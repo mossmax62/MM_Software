@@ -97,8 +97,8 @@ nav ul li{
     text-align: center;
     position: relative;
     z-index: -1;
-    max-width: 100%;
-    height: auto;
+    width: 100px;
+    height: 100px;
     background-color: indianred;
     border-left: solid 15px gold;
     border-top: solid 15px royalblue;
@@ -107,7 +107,7 @@ nav ul li{
 }
 
 .contenedor__box label{
-  border: solid 2px green !important;
+  border: solid 0px green !important;
   border-radius: 15px;
   position: absolute;
   top: 50%;
@@ -142,14 +142,22 @@ aside, article, ad{
     grid-area: nav;
 }
 .side{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
     grid-area: sidebar;
 }
 .ad{
     grid-area: ad;
     border: 1px solid black;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .main-footer{
     grid-area: footer;
+    display: flex;
+    flex-direction: column;
 }
 footer{
     position: sticky;
@@ -210,6 +218,8 @@ footer{
                 "header header header"
                 "nav nav       nav"
                 "contenido contenido sidebar" 
+                "contenido contenido sidebar" 
+                "contenido contenido ad"
                 "contenido contenido ad" 
                 "footer footer footer";
                 }
